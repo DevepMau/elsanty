@@ -7,9 +7,8 @@
   color: white;
 }
 
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.navbar-logo img {
+  height: 50px; /* o el tamaño que quieras */
 }
 
 .navbar-links {
