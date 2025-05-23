@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ImageSlider.css';
 
 // Importa tus imágenes
@@ -11,17 +11,37 @@ const images = [img1, img2, img3, img4];
 
 function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
-  // Cambiar imagen cada 3 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
+  // Iniciar carrusel automático
+  const startAutoSlide = () => {
+    intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Cambia el número si quieres otro intervalo
+    }, 5000);
+  };
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    startAutoSlide();
+    return () => clearInterval(intervalRef.current);
   }, []);
+
+  const goToPrevious = () => {
+    clearInterval(intervalRef.current);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+    startAutoSlide();
+  };
+
+  const goToNext = () => {
+    clearInterval(intervalRef.current);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+    startAutoSlide();
+  };
 
   return (
     <div className="slider-container">
@@ -33,6 +53,10 @@ function ImageSlider() {
           <img key={index} src={img} alt={`Slide ${index}`} className="slide-image" />
         ))}
       </div>
+
+      {/* Botones de navegación */}
+      <button className="nav-button prev" onClick={goToPrevious}>‹</button>
+      <button className="nav-button next" onClick={goToNext}>›</button>
     </div>
   );
 }
