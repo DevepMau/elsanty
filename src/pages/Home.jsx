@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css';
+import Nombre from '../assets/logo/nombre.png';
 import ImageSlider from '../components/ImageSlider';
 
 export default function Home() {
@@ -7,8 +8,11 @@ export default function Home() {
     <div className='home-container'>
       <div className="home-content">
         <div className="text-section">
-          <h1>Nombre del Emprendimiento</h1>
-          <p>Tu lema o frase inspiradora aquí</p>
+          <img src={Nombre} alt='nombre' />
+          <h1>¡A tu servicio!</h1>
+          <p>Nos dedicamos al mantenimiento integral de espacios exteriores, especializados en jardinería,
+             corte de césped, poda de árboles y mantenimiento general.
+          </p>
         </div>
         <div className="slider-section">
           <ImageSlider />

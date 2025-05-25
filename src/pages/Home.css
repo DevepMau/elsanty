@@ -24,6 +24,10 @@
   max-width: 50%;
 }
 
+.text-section img{
+  height: 10dvh; /* o el tamaño que quieras */
+}
+
 /* Slider a la derecha */
 .slider-section {
   flex: 1;
@@ -33,11 +37,13 @@
 }
 
 .home-content h1{
-    color: white;
+  color: #f0a500; 
 }
 
 .home-content p{
-    color: #f0a500;
+  color: white;
+  max-width: 80%;
+  text-align: justify;
 }
 
 .overlay {
