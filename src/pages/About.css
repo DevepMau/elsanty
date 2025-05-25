@@ -1,4 +1,4 @@
-.home-container {
+.about-container{
     background-image: url('../assets/background/bg-cut-grass.jpg');
     background-size: cover;
     background-position: center;
@@ -9,46 +9,46 @@
     padding-top: 50px;
 }
 
-.home-content {
+.about-content {
   position: relative; /* para que quede encima del overlay */
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   align-items: flex-start;
-  padding: 6rem 4rem;
+  text-align: center;
+  padding: 4rem 4rem;
   height: 100%;
 }
 
-/* Texto a la izquierda */
-.text-section {
-  flex: 1;
-  color: #333;
-  max-width: 50%;
+.about-content hr{
+    max-width: 50%;
 }
 
-.text-section img{
-  height: 10dvh; /* o el tamaño que quieras */
+.about-content img{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 300px; 
+    border-radius: 15px;
 }
 
-/* Slider a la derecha */
-.slider-section {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* centrar el slider si es más pequeño */
-  max-width: 50%;
+.about-intro{
+    padding-top: 3rem;
+    font-size: x-large;
 }
 
-.home-content h1{
-  color: #f0a500; 
+.about-content p{
+    color: white;
+    text-align: center;
+    padding-left: 25%;
+    max-width: 50%;
+    font-size: x-large;
 }
 
-.home-content p{
-  color: white;
-  max-width: 90%;
-  font-size: x-large;
+.about-content h1{
+    color: #f0a500;
+    font-size: xx-large;
 }
 
-.home-overlay {
+.about-overlay{
     background: linear-gradient(
     to left,
     rgba(34, 34, 34, 1) 0%,
@@ -63,4 +63,3 @@
     width: 100%;
     height: 100%;
 }
-

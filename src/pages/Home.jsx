@@ -18,7 +18,7 @@ export default function Home() {
           <ImageSlider />
         </div>
       </div>
-      <div className='overlay'></div>
+      <div className='home-overlay'></div>
     </div>
   );
 }
