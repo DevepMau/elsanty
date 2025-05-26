@@ -26,6 +26,12 @@
   max-width: 50%;
 }
 
+.text-section hr{
+  margin-bottom: 2rem;
+  max-width: 90%;
+  margin-left: 0;
+}
+
 .text-section img{
   height: 10dvh; /* o el tamaño que quieras */
 }

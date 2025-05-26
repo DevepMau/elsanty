@@ -1,26 +1,31 @@
-import React from 'react'
+import React from 'react';
 import './About.css';
 import smile from '../assets/others/smile.jpg';
 
 export default function About() {
   return (
     <div className='about-container'>
-      <div className="about-content">
-        <h1>SOBRE NOSOTROS:</h1>
-        <hr />
-        <p className="about-intro">
-          Somos un emprendimiento familiar dedicado a servicios de jardinería, limpieza y mantenimiento general del hogar.
-        </p>
-        <img src={smile} alt='smile'></img>
-        <p>
-          Lo que más nos motiva es forjar un lazo de confianza con nuestros clientes, que nos sientan como parte de su familia, 
-          alguien en quien confiar cuando necesitan algo. Además, nos encanta dejar los espacios bonitos y presentables.
-        </p>
-        <p>
-          Nuestros valores fundamentales son la confianza, honestidad, puntualidad, prolijidad y compromiso. Siempre buscamos que cada cliente quede satisfecho con nuestro trabajo.
-        </p>
+      {/* Banner con imagen y texto encima */}
+      <div className='about-banner'>
+        <img src={smile} alt='smile' className='about-banner-img' />
+        <div className='about-banner-text'>
+          <h1>UN EMPRENDIMIENTO FAMILIAR</h1>
+        </div>
       </div>
-      <div className='about-overlay'></div>
+
+      {/* Contenido debajo del banner con overlay */}
+      <div className='about-overlay-content'>
+        <div className='about-overlay'></div>
+        <div className='about-text'>
+          <hr />
+          <h2>MISION/VISION</h2>
+          <p>
+            Nuestro proyecto nace de la necesidad y del deseo de salir adelante juntos.<br />
+            Nos mueve la confianza, el compromiso y la satisfacción de nuestros clientes.<br />
+            Cada trabajo lo hacemos con responsabilidad, como si fuera para nuestra propia casa.
+          </p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
